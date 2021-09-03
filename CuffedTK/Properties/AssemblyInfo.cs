@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("CuffedTK")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A simple plugin that prevents Cuffed Players be damaged by MTF or Facility Guards")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Marco15453")]
 [assembly: AssemblyProduct("CuffedTK")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
+[assembly: AssemblyCopyright("Copyright © Marco15453 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
