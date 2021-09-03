@@ -10,7 +10,7 @@ namespace CuffedTK.Events {
             if (!ev.Target.IsCuffed) return;
 
             if(ev.Target.Team == Team.CDP) {
-                if (CuffedTK.Instance.Config.DisallowDamageToDClass.TryGetValue(ev.Attacker.Team, out bool value) && !value) return;
+                if (CuffedTK.Instance.Config.DisallowDamagetodclass.TryGetValue(ev.Attacker.Team, out bool value) && !value) return;
 
                 ev.IsAllowed = false;
                 return;
