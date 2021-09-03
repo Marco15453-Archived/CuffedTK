@@ -25,5 +25,14 @@ namespace CuffedTK {
             { Team.RSC, true },
             { Team.TUT, false }
         };
+
+        [Description("What Team should not be allowed to damage an Cuffed Scientists! CDP = Class-D, CHI = Chaos, MTF = Nine-Tailed Fox, RSC = Scientists, TUT = Tutorial")]
+        public Dictionary<Team, bool> DisallowDamagetoScientists { get; set; } = new Dictionary<Team, bool> {
+            { Team.CDP, true },
+            { Team.CHI, true },
+            { Team.MTF, false },
+            { Team.RSC, false },
+            { Team.TUT, false }
+        };
     }
 }
