@@ -24,6 +24,12 @@ disallow_damagetodclass | bool | What Team should not be allowed to damage an Cu
 cuffed_t_k:
 # Should the plugin be enabled?
   is_enabled: true
+  # Should the Attacker be broadcasted that he can't damage an Cuffed D-Class?
+  send_attacker_broadcast: true
+  # For how long should the broadcast be shown?
+  attacker_broadcast_time: 3
+  # What should the Attacker be broadcasted when trying to damage a Cuffed D-Class? {PLAYER} will be replaced with the Target Username
+  attacker_broadcast: You cannot damage {PLAYER} because he is cuffed!
   # What Team should not be allowed to damage an Cuffed D-Class! CDP = Class-D, CHI = Chaos, MTF = Nine-Tailed Fox, RSC = Scientists, TUT = Tutorial
   disallow_damagetodclass:
     CDP: false
