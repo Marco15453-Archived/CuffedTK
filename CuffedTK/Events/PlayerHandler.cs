@@ -2,7 +2,8 @@
 using Exiled.API.Features;
 using Exiled.Events.EventArgs;
 
-namespace CuffedTK.Events {
+namespace CuffedTK.Events 
+{
     internal sealed class PlayerHandler 
     {
         
