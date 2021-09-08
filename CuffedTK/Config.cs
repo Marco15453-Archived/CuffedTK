@@ -3,8 +3,10 @@ using Exiled.API.Enums;
 using System.ComponentModel;
 using System.Collections.Generic;
 
-namespace CuffedTK {
-    public sealed class Config : IConfig {
+namespace CuffedTK 
+{
+    public sealed class Config : IConfig 
+    {
         [Description("Should the plugin be enabled?")]
         public bool IsEnabled { get; set; } = true;
 
@@ -18,7 +20,8 @@ namespace CuffedTK {
         public string AttackerBroadcast { get; set; } = "You cannot damage {PLAYER} because he is cuffed!";
 
         [Description("What Team should not be allowed to damage an Cuffed D-Class! CDP = Class-D, CHI = Chaos, MTF = Nine-Tailed Fox, RSC = Scientists, TUT = Tutorial")]
-        public Dictionary<Team, bool> DisallowDamagetodclass { get; set; } = new Dictionary<Team, bool> {
+        public Dictionary<Team, bool> DisallowDamagetodclass { get; set; } = new Dictionary<Team, bool> 
+        {
             { Team.CDP, false },
             { Team.CHI, false },
             { Team.MTF, true },
@@ -27,7 +30,8 @@ namespace CuffedTK {
         };
 
         [Description("What Team should not be allowed to damage an Cuffed Scientists! CDP = Class-D, CHI = Chaos, MTF = Nine-Tailed Fox, RSC = Scientists, TUT = Tutorial")]
-        public Dictionary<Team, bool> DisallowDamagetoScientists { get; set; } = new Dictionary<Team, bool> {
+        public Dictionary<Team, bool> DisallowDamagetoScientists { get; set; } = new Dictionary<Team, bool> 
+        {
             { Team.CDP, true },
             { Team.CHI, true },
             { Team.MTF, false },
