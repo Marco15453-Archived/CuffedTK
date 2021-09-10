@@ -18,7 +18,7 @@ namespace CuffedTK.Events
 
                 if(CuffedTK.Instance.Config.sendAttackerBroadcast) 
                 {
-                    string message = CuffedTK.Instance.Config.AttackerBroadcast.Replace("{PLAYER}", ev.Target.Nickname);
+                    string message = CuffedTK.Instance.Config.AttackerBroadcast.Replace("%PLAYER%", ev.Target.Nickname);
                     ev.Attacker.Broadcast(CuffedTK.Instance.Config.AttackerBroadcastTime, message, Broadcast.BroadcastFlags.Normal, false);
                 }
 
@@ -30,7 +30,7 @@ namespace CuffedTK.Events
 
                 if (CuffedTK.Instance.Config.sendAttackerBroadcast) 
                 {
-                    string message = CuffedTK.Instance.Config.AttackerBroadcast.Replace("{PLAYER}", ev.Target.Nickname);
+                    string message = CuffedTK.Instance.Config.AttackerBroadcast.Replace("%PLAYER%", ev.Target.Nickname);
                     ev.Attacker.Broadcast(CuffedTK.Instance.Config.AttackerBroadcastTime, message, Broadcast.BroadcastFlags.Normal, false);
                 }
 

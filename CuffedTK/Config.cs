@@ -16,8 +16,8 @@ namespace CuffedTK
         [Description("For how long should the broadcast be shown?")]
         public ushort AttackerBroadcastTime { get; set; } = 3;
 
-        [Description("What should the Attacker be broadcasted when trying to damage a Cuffed D-Class? {PLAYER} will be replaced with the Target Username")]
-        public string AttackerBroadcast { get; set; } = "You cannot damage {PLAYER} because he is cuffed!";
+        [Description("What should the Attacker be broadcasted when trying to damage a Cuffed D-Class? %PLAYER% will be replaced with the Target Username")]
+        public string AttackerBroadcast { get; set; } = "You cannot damage %PLAYER% because he is cuffed!";
 
         [Description("What Team should not be allowed to damage an Cuffed D-Class! CDP = Class-D, CHI = Chaos, MTF = Nine-Tailed Fox, RSC = Scientists, TUT = Tutorial")]
         public Dictionary<Team, bool> DisallowDamagetodclass { get; set; } = new Dictionary<Team, bool> 
