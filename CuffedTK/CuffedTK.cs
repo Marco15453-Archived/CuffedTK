@@ -10,6 +10,11 @@ namespace CuffedTK
     {
         internal static CuffedTK Instance { get; private set; }
 
+        public override string Name => "CuffedTK";
+        public override string Author => "Marco15453";
+        public override Version Version => new Version(1, 2, 0);
+        public override Version RequiredExiledVersion => new Version(3, 0, 0);
+
         private PlayerHandler playerHandler;
 
         public override void OnEnabled() 
