@@ -15,6 +15,7 @@ TUT | Tutorial
 Name | Type | Description | Default
 ---- | ---- | ----------- | -------
 is_enabled | bool | Is the plugin enabled? | true
+auto_update | bool | Should the plugin automaticly update? | true
 attacker_broadcast_time | ushort | For how long should the broadcast be shown to the Attacker? (-1 = Disabled) | 3
 attacker_broadcast | string | What should the Attacker be broadcasted when trying to damage a Cuffed D-Class? %PLAYER% will be replaced with the Target Username | You cannot damage %PLAYER% because he is cuffed! 
 disallow_damagetodclass | HashSet | What Team should not be allowed to damage an Cuffed D-Class! CDP = Class-D, CHI = Chaos, MTF = Nine-Tailed Fox, RSC = Scientists, TUT = Tutorial | MTF, RSC
