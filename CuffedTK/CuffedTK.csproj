@@ -36,6 +36,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\EXILED Server Files 3.0\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\References\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
     <Reference Include="Exiled.API, Version=2.14.0.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\EXILED Server Files 3.0\EXILED\Plugins\dependencies\Exiled.API.dll</HintPath>
@@ -56,8 +59,12 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\References\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoUpdater.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="CuffedTK.cs" />
     <Compile Include="Events\PlayerHandler.cs" />

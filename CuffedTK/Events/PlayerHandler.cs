@@ -12,28 +12,20 @@ namespace CuffedTK.Events
         {
             if (!ev.Target.IsCuffed) return;
 
-            if(ev.Target.Team == Team.CDP) 
+            if(ev.Target.Team == Team.CDP)
             {
-                if (CuffedTK.Instance.Config.DisallowDamagetodclass.TryGetValue(ev.Attacker.Team, out bool value) && !value) return;
+                if (!CuffedTK.Instance.Config.DisallowDamagetodclass.Contains(ev.Attacker.Team)) return;
 
-                if(CuffedTK.Instance.Config.sendAttackerBroadcast) 
-                {
-                    string message = CuffedTK.Instance.Config.AttackerBroadcast.Replace("%PLAYER%", ev.Target.Nickname);
-                    ev.Attacker.Broadcast(CuffedTK.Instance.Config.AttackerBroadcastTime, message, Broadcast.BroadcastFlags.Normal, false);
-                }
-
+                if (CuffedTK.Instance.Config.AttackerBroadcastTime > 0)
+                    ev.Attacker.Broadcast(CuffedTK.Instance.Config.AttackerBroadcastTime, CuffedTK.Instance.Config.AttackerBroadcast.Replace("%PLAYER%", ev.Target.Nickname));
                 ev.IsAllowed = false;
                 return;
-            } else if(ev.Target.Team == Team.RSC) 
+            } else if(ev.Target.Team == Team.RSC)
             {
-                if (CuffedTK.Instance.Config.DisallowDamagetoScientists.TryGetValue(ev.Attacker.Team, out bool value) && !value) return;
+                if (!CuffedTK.Instance.Config.DisallowDamagetoScientists.Contains(ev.Attacker.Team)) return;
 
-                if (CuffedTK.Instance.Config.sendAttackerBroadcast) 
-                {
-                    string message = CuffedTK.Instance.Config.AttackerBroadcast.Replace("%PLAYER%", ev.Target.Nickname);
-                    ev.Attacker.Broadcast(CuffedTK.Instance.Config.AttackerBroadcastTime, message, Broadcast.BroadcastFlags.Normal, false);
-                }
-
+                if(CuffedTK.Instance.Config.AttackerBroadcastTime > 0)
+                    ev.Attacker.Broadcast(CuffedTK.Instance.Config.AttackerBroadcastTime, CuffedTK.Instance.Config.AttackerBroadcast.Replace("%PLAYER%", ev.Target.Nickname));
                 ev.IsAllowed = false;
                 return;
             }
