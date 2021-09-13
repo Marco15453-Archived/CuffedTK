@@ -9,7 +9,7 @@ namespace CuffedTK
 {
     internal static class AutoUpdater
     {
-        private const string Version = "1.3.0";
+        private const string Version = "1.4.0";
         private const string PluginName = "CuffedTK";
         private const string updateURL = "https://scp.4everyone.xyz/update";
 

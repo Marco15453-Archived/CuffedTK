@@ -12,20 +12,28 @@ namespace CuffedTK.Events
         {
             if (!ev.Target.IsCuffed) return;
 
+            if(CuffedTK.Instance.Config.DisallowedDamageTypes.Contains(ev.DamageType.Name) && (ev.Target.Team == Team.CDP || ev.Target.Team == Team.RSC))
+            {
+                if (CuffedTK.Instance.Config.DamageTypesTime > 0)
+                    ev.Attacker.ShowHint(CuffedTK.Instance.Config.DamageTypesMessage.Replace("%PLAYER%", ev.Target.Nickname).Replace("%DAMAGETYPE%", ev.DamageType.Name), CuffedTK.Instance.Config.DamageTypesTime);
+                ev.IsAllowed = false;
+                return;
+            }
+
             if(ev.Target.Team == Team.CDP)
             {
                 if (!CuffedTK.Instance.Config.DisallowDamagetodclass.Contains(ev.Attacker.Team)) return;
 
-                if (CuffedTK.Instance.Config.AttackerBroadcastTime > 0)
-                    ev.Attacker.Broadcast(CuffedTK.Instance.Config.AttackerBroadcastTime, CuffedTK.Instance.Config.AttackerBroadcast.Replace("%PLAYER%", ev.Target.Nickname));
+                if (CuffedTK.Instance.Config.AttackerHintTime > 0)
+                    ev.Attacker.ShowHint(CuffedTK.Instance.Config.AttackerHint.Replace("%PLAYER%", ev.Target.Nickname), CuffedTK.Instance.Config.AttackerHintTime);
                 ev.IsAllowed = false;
                 return;
             } else if(ev.Target.Team == Team.RSC)
             {
                 if (!CuffedTK.Instance.Config.DisallowDamagetoScientists.Contains(ev.Attacker.Team)) return;
 
-                if(CuffedTK.Instance.Config.AttackerBroadcastTime > 0)
-                    ev.Attacker.Broadcast(CuffedTK.Instance.Config.AttackerBroadcastTime, CuffedTK.Instance.Config.AttackerBroadcast.Replace("%PLAYER%", ev.Target.Nickname));
+                if(CuffedTK.Instance.Config.AttackerHintTime > 0)
+                    ev.Attacker.ShowHint(CuffedTK.Instance.Config.AttackerHint.Replace("%PLAYER%", ev.Target.Nickname), CuffedTK.Instance.Config.AttackerHintTime);
                 ev.IsAllowed = false;
                 return;
             }
