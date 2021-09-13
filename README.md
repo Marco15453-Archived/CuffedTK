@@ -1,5 +1,5 @@
 # CuffedTK
-A simple plugin that prevents Cuffed Players be damaged by configureable Teams
+A simple plugin that prevents Cuffed Players be damaged by configureable Teams and/or Damaged Type
 
 # Team
 Short | Full
