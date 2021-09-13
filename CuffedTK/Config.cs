@@ -39,7 +39,7 @@ namespace CuffedTK
         [Description("What hint should be displayed when trying to damage a Cuffed D-Class with a Disallowed DamageType? %PLAYER% will be replaced with the Target Username and %DAMAGETYPE% will be replaced with the DamageType")]
         public string DamageTypesMessage { get; set; } = "You cannot damage %PLAYER% with %DAMAGETYPE%!";
 
-        [Description("What DamageType should not be allowed to damage a Cuffed D-Class or Cuffed Scientist? Check https://github.com/Marco15453/CuffedTK#readme for all DamageTypes")]
+        [Description("What DamageType should not be allowed to damage a Cuffed D-Class or Cuffed Scientist? Check https://github.com/Marco15453/CuffedTK#damage-types for all DamageTypes")]
         public HashSet<string> DisallowedDamageTypes { get; set; } = new HashSet<string>
         {
             DamageTypes.FriendlyFireDetector.Name,

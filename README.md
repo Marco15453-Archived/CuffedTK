@@ -60,7 +60,7 @@ disallow_damagetodclass | HashSet | What Team should not be allowed to damage an
 disallow_damageto_scientists | HashSet | What Team should not be allowed to damage an Cuffed Scientists! CDP = Class-D, CHI = Chaos, MTF = Nine-Tailed Fox, RSC = Scientists, TUT = Tutorial | CDP, CHI
 damage_types_time | int | For how long should the hint be shown to the Attacker? (-1 = Disabled) | 3
 damage_types_message | string | What hint should be displayed when trying to damage a Cuffed D-Class with a Disallowed DamageType? %PLAYER% will be replaced with the Target Username and %DAMAGETYPE% will be replaced with the DamageType | You cannot damage %PLAYER% with %DAMAGETYPE%!
-disallowed_damage_types | Hashset | What DamageType should not be allowed to damage a Cuffed D-Class or Cuffed Scientist? Check https://github.com/Marco15453/CuffedTK#readme for all DamageTypes | FriendlyFireDetector, Falldown
+disallowed_damage_types | Hashset | What DamageType should not be allowed to damage a Cuffed D-Class or Cuffed Scientist? Check https://github.com/Marco15453/CuffedTK#damage-types for all DamageTypes | FriendlyFireDetector, Falldown
 
 # Default Config
 ```yml
@@ -85,7 +85,7 @@ cuffed_t_k:
   damage_types_time: 3
   # What hint should be displayed when trying to damage a Cuffed D-Class with a Disallowed DamageType? %PLAYER% will be replaced with the Target Username and %DAMAGETYPE% will be replaced with the DamageType
   damage_types_message: You cannot damage %PLAYER% with %DAMAGETYPE%!
-  # What DamageType should not be allowed to damage a Cuffed D-Class or Cuffed Scientist? Check https://github.com/Marco15453/CuffedTK#readme for all DamageTypes
+  # What DamageType should not be allowed to damage a Cuffed D-Class or Cuffed Scientist? Check https://github.com/Marco15453/CuffedTK#damage-types for all DamageTypes
   disallowed_damage_types:
   - Friendly fire detector
   - FALLDOWN
