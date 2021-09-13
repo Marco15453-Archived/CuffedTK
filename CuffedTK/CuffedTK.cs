@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Exiled.API.Enums;
 using Exiled.API.Features;
 using CuffedTK.Events;
+using MEC;
 
 namespace CuffedTK 
 {
@@ -17,16 +18,20 @@ namespace CuffedTK
 
         private PlayerHandler playerHandler;
 
+        private CoroutineHandle updateCoroutine;
+
         public override void OnEnabled() 
         {
             Instance = this;
             registerEvents();
+            if (CuffedTK.Instance.Config.AutoUpdate) updateCoroutine = Timing.RunCoroutine(AutoUpdater.AutoUpdates()); 
             base.OnEnabled();
         }
 
         public override void OnDisabled() 
         {
             unregisterEvents();
+            Timing.KillCoroutines(updateCoroutine);
             base.OnDisabled();
         }
 
