@@ -16,9 +16,9 @@ Short | Full
 ----- | ----
 AK | Damaged By AK
 ASPHYXIATION | Damaged by ASPHYXIATION
-BLEEDING | Damaged By BLEEDING
-COM15 | Damaged By COM15
-COM18 | -/-
+BLEEDING | Damaged by BLEEDING
+COM15 | Damaged by COM15
+COM18 | Damaged by COM-18 Pistol
 CONTAIN | Being Damaged by Contain
 CROSSVEC | Damaged By CrossVEC
 DECONT | Damaged by Decontainment
@@ -29,12 +29,12 @@ Friendly fire detector | Damaged By Friendly Fire Detector
 FSP9 | Damaged By FSP9
 GRENADE | Damaged by Grenade
 LOGICER | Damaged by Logicer
-LURE | -/-
+LURE | Damaged by SCP-106 Containment Chamber when you enter it
 MICROHID | Damaged by Micro-HID
 NUKE | Damaged by Nuke
 POCKET | Damaged by Pocket Dimension
 POISONED | Damaged by Poison
-RAGDOLL-LESS | -/-
+RAGDOLL-LESS | Damage Type when player dies without leaving a ragdoll (for example, changing role)
 RECONTAINMENT | Damaged By Recontainment
 REVOLVER | Damaged by Revolver
 SCP-018 | Damaged by SCP-018
