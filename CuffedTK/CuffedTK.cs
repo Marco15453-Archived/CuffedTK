@@ -1,19 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using Exiled.API.Enums;
 using Exiled.API.Features;
 using CuffedTK.Events;
-using MEC;
 
 namespace CuffedTK 
 {
     public class CuffedTK : Plugin<Config> 
     {
-        internal static CuffedTK Instance { get; private set; }
+        internal static CuffedTK Instance;
 
         public override string Name => "CuffedTK";
         public override string Author => "Marco15453";
-        public override Version Version => new Version(1, 4, 1);
+        public override string Prefix => "CTK";
+        public override Version Version => new Version(1, 5, 0);
         public override Version RequiredExiledVersion => new Version(3, 0, 0);
 
         private PlayerHandler playerHandler;
