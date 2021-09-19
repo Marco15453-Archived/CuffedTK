@@ -20,13 +20,13 @@ BLEEDING | Damaged by BLEEDING
 COM15 | Damaged by COM15
 COM18 | Damaged by COM-18 Pistol
 CONTAIN | Being Damaged by Contain
-CROSSVEC | Damaged By CrossVEC
+CROSSVEC | Damaged by CrossVEC
 DECONT | Damaged by Decontainment
 E11SR | Damaged by E11SR
 FALLDOWN | Damaged by FALLDOWN
 Flying detection | Damaged by Flying Detection
-Friendly fire detector | Damaged By Friendly Fire Detector
-FSP9 | Damaged By FSP9
+Friendly fire detector | Damaged by Friendly Fire Detector
+FSP9 | Damaged by FSP9
 GRENADE | Damaged by Grenade
 LOGICER | Damaged by Logicer
 LURE | Damaged by SCP-106 Containment Chamber when you enter it
@@ -35,7 +35,7 @@ NUKE | Damaged by Nuke
 POCKET | Damaged by Pocket Dimension
 POISONED | Damaged by Poison
 RAGDOLL-LESS | Damage Type when player dies without leaving a ragdoll (for example, changing role)
-RECONTAINMENT | Damaged By Recontainment
+RECONTAINMENT | Damaged by Recontainment
 REVOLVER | Damaged by Revolver
 SCP-018 | Damaged by SCP-018
 SCP-049 | Damaged by SCP-049
