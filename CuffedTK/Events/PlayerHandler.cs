@@ -15,10 +15,7 @@ namespace CuffedTK.Events
                 if (CuffedTK.Instance.Config.DamageTypesTime > 0)
                     ev.Attacker.ShowHint(CuffedTK.Instance.Config.DamageTypesMessage.Replace("%PLAYER%", ev.Target.Nickname).Replace("%DAMAGETYPE%", ev.DamageType.Name), CuffedTK.Instance.Config.DamageTypesTime);
                 ev.IsAllowed = false;
-                return;
-            }
-
-            if((ev.Target.Team == Team.CDP && CuffedTK.Instance.Config.DisallowDamagetodclass.Contains(ev.Attacker.Team)) || (ev.Target.Team == Team.RSC && CuffedTK.Instance.Config.DisallowDamagetoScientists.Contains(ev.Attacker.Team))) {
+            } else if((ev.Target.Team == Team.CDP && CuffedTK.Instance.Config.DisallowDamagetodclass.Contains(ev.Attacker.Team)) || (ev.Target.Team == Team.RSC && CuffedTK.Instance.Config.DisallowDamagetoScientists.Contains(ev.Attacker.Team))) {
                 if (CuffedTK.Instance.Config.AttackerHintTime > 0)
                     ev.Attacker.ShowHint(CuffedTK.Instance.Config.AttackerHint.Replace("%PLAYER%", ev.Target.Nickname), CuffedTK.Instance.Config.AttackerHintTime);
                 ev.IsAllowed = false;
