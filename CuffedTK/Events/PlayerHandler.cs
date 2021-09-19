@@ -18,17 +18,13 @@ namespace CuffedTK.Events
                 return;
             }
 
-            if(ev.Target.Team == Team.CDP)
+            if(ev.Target.Team == Team.CDP && CuffedTK.Instance.Config.DisallowDamagetodclass.Contains(ev.Attacker.Team))
             {
-                if (!CuffedTK.Instance.Config.DisallowDamagetodclass.Contains(ev.Attacker.Team)) return;
-
                 if (CuffedTK.Instance.Config.AttackerHintTime > 0)
                     ev.Attacker.ShowHint(CuffedTK.Instance.Config.AttackerHint.Replace("%PLAYER%", ev.Target.Nickname), CuffedTK.Instance.Config.AttackerHintTime);
                 ev.IsAllowed = false;
-            } else if(ev.Target.Team == Team.RSC)
+            } else if(ev.Target.Team == Team.RSC && CuffedTK.Instance.Config.DisallowDamagetoScientists.Contains(ev.Attacker.Team))
             {
-                if (!CuffedTK.Instance.Config.DisallowDamagetoScientists.Contains(ev.Attacker.Team)) return;
-
                 if(CuffedTK.Instance.Config.AttackerHintTime > 0)
                     ev.Attacker.ShowHint(CuffedTK.Instance.Config.AttackerHint.Replace("%PLAYER%", ev.Target.Nickname), CuffedTK.Instance.Config.AttackerHintTime);
                 ev.IsAllowed = false;
