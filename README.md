@@ -53,7 +53,6 @@ WALL | -/-
 Name | Type | Description | Default
 ---- | ---- | ----------- | -------
 is_enabled | bool | Is the plugin enabled? | true
-auto_update | bool | Should the plugin automaticly update? | true
 attacker_hint_time | ushort | For how long should the Hint be shown to the Attacker? (-1 = Disabled) | 3
 attacker_hint | string | What hint should the Attacker be displayed when trying to damage a Cuffed D-Class? %PLAYER% will be replaced with the Target Username | You cannot damage %PLAYER% because he is cuffed! 
 disallow_damagetodclass | HashSet | What Team should not be allowed to damage an Cuffed D-Class! CDP = Class-D, CHI = Chaos, MTF = Nine-Tailed Fox, RSC = Scientists, TUT = Tutorial | MTF, RSC
@@ -67,8 +66,6 @@ disallowed_damage_types | Hashset | What DamageType should not be allowed to dam
 cuffed_t_k:
   # Should the plugin be enabled?
   is_enabled: true
-  # Should the plugin automaticly update?
-  auto_update: true
   # For how long should the Hint be shown to the Attacker? (-1 = Disabled)
   attacker_hint_time: 3
   # What hint should the Attacker be displayed when trying to damage a Cuffed D-Class? %PLAYER% will be replaced with the Target Username
@@ -89,4 +86,5 @@ cuffed_t_k:
   disallowed_damage_types:
   - Friendly fire detector
   - FALLDOWN
+  - GRENADE
 ```

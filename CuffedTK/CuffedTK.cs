@@ -13,25 +13,21 @@ namespace CuffedTK
 
         public override string Name => "CuffedTK";
         public override string Author => "Marco15453";
-        public override Version Version => new Version(1, 4, 0);
+        public override Version Version => new Version(1, 4, 1);
         public override Version RequiredExiledVersion => new Version(3, 0, 0);
 
         private PlayerHandler playerHandler;
-
-        private CoroutineHandle updateCoroutine;
 
         public override void OnEnabled() 
         {
             Instance = this;
             registerEvents();
-            if (CuffedTK.Instance.Config.AutoUpdate) updateCoroutine = Timing.RunCoroutine(AutoUpdater.AutoUpdates()); 
             base.OnEnabled();
         }
 
         public override void OnDisabled() 
         {
             unregisterEvents();
-            Timing.KillCoroutines(updateCoroutine);
             base.OnDisabled();
         }
 

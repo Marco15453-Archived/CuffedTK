@@ -10,9 +10,6 @@ namespace CuffedTK
         [Description("Should the plugin be enabled?")]
         public bool IsEnabled { get; set; } = true;
 
-        [Description("Should the plugin automaticly update?")]
-        public bool AutoUpdate { get; set; } = true;
-
         [Description("For how long should the Hint be shown to the Attacker? (-1 = Disabled)")]
         public ushort AttackerHintTime { get; set; } = 3;
 
@@ -43,7 +40,8 @@ namespace CuffedTK
         public HashSet<string> DisallowedDamageTypes { get; set; } = new HashSet<string>
         {
             DamageTypes.FriendlyFireDetector.Name,
-            DamageTypes.Falldown.Name
+            DamageTypes.Falldown.Name,
+            DamageTypes.Grenade.Name
         };
     }
 }
