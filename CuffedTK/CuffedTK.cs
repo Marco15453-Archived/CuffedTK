@@ -7,8 +7,6 @@ namespace CuffedTK
 {
     public class CuffedTK : Plugin<Config> 
     {
-        internal static CuffedTK Instance;
-
         public override string Name => "CuffedTK";
         public override string Author => "Marco15453";
         public override string Prefix => "CTK";
@@ -19,7 +17,6 @@ namespace CuffedTK
 
         public override void OnEnabled() 
         {
-            Instance = this;
             registerEvents();
             base.OnEnabled();
         }
@@ -32,7 +29,7 @@ namespace CuffedTK
 
         private void registerEvents() 
         {
-            playerHandler = new PlayerHandler();
+            playerHandler = new PlayerHandler(this);
 
             // Player
             Exiled.Events.Handlers.Player.Hurting += playerHandler.onHurting;
