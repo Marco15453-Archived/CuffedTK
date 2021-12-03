@@ -11,7 +11,7 @@ namespace CuffedTK
 
         public void onHurting(HurtingEventArgs ev)
         {
-            if (!ev.Target.IsCuffed) return;
+            if (!ev.Target.IsCuffed || ev.Target == null || ev.Attacker == null || ev.Handler.Type == DamageType.Unknown) return;
 
             if (plugin.Config.DisallowedDamageTypes.Contains(ev.Handler.Type) && (ev.Target.Team == Team.CDP || ev.Target.Team == Team.RSC))
             {
