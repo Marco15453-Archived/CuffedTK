@@ -1,7 +1,6 @@
 ﻿using System;
 using Exiled.API.Enums;
 using Exiled.API.Features;
-using CuffedTK.Events;
 
 namespace CuffedTK 
 {
@@ -13,7 +12,7 @@ namespace CuffedTK
         public override Version Version => new Version(1, 8, 0);
         public override Version RequiredExiledVersion => new Version(4, 0, 0);
 
-        private PlayerHandler playerHandler;
+        private EventHandler eventHandler;
 
         public override void OnEnabled() 
         {
@@ -29,18 +28,18 @@ namespace CuffedTK
 
         private void registerEvents() 
         {
-            playerHandler = new PlayerHandler(this);
+            eventHandler = new EventHandler(this);
 
             // Player
-            Exiled.Events.Handlers.Player.Hurting += playerHandler.onHurting;
+            Exiled.Events.Handlers.Player.Hurting += eventHandler.onHurting;
         }
 
         private void unregisterEvents() 
         {
             // Player
-            Exiled.Events.Handlers.Player.Hurting -= playerHandler.onHurting;
+            Exiled.Events.Handlers.Player.Hurting -= eventHandler.onHurting;
 
-            playerHandler = null;
+            eventHandler = null;
         }
     }
 }
