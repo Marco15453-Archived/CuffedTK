@@ -12,42 +12,7 @@ SCP | SCP
 TUT | Tutorial
 
 # Damage Types
-Short | Full
------ | ----
-AK | Damaged By AK
-ASPHYXIATION | Damaged by ASPHYXIATION
-BLEEDING | Damaged by BLEEDING
-COM15 | Damaged by COM15
-COM18 | Damaged by COM-18 Pistol
-CONTAIN | Being Damaged by Contain
-CROSSVEC | Damaged by CrossVEC
-DECONT | Damaged by Decontainment
-E11SR | Damaged by E11SR
-FALLDOWN | Damaged by FALLDOWN
-Flying detection | Damaged by Flying Detection
-Friendly fire detector | Damaged by Friendly Fire Detector
-FSP9 | Damaged by FSP9
-GRENADE | Damaged by Grenade
-LOGICER | Damaged by Logicer
-LURE | Damaged by SCP-106 Containment Chamber when you enter it
-MICROHID | Damaged by Micro-HID
-NUKE | Damaged by Nuke
-POCKET | Damaged by Pocket Dimension
-POISONED | Damaged by Poison
-RAGDOLL-LESS | Damage Type when player dies without leaving a ragdoll (for example, changing role)
-RECONTAINMENT | Damaged by Recontainment
-REVOLVER | Damaged by Revolver
-SCP-018 | Damaged by SCP-018
-SCP-049 | Damaged by SCP-049
-SCP-049-2 | Damaged by SCP-049-2
-SCP-096 | Damaged by SCP-096
-SCP-106 | Damaged by SCP-106
-SCP-173 | Damaged by SCP-173
-SCP-207 | Damaged by SCP-207
-SCP-939 | Damaged by SCP-939
-SHOTGUN | Damaged by Shotgun
-TESLA | Damaged by Tesla
-WALL | -/-
+Check [Here](https://exiled-team.github.io/EXILED/api/Exiled.API.Enums.DamageType.html) for all DamageTypes
 
 # Config
 Name | Type | Description | Default
@@ -84,7 +49,7 @@ cuffed_t_k:
   damage_types_message: You cannot damage %PLAYER% with %DAMAGETYPE%!
   # What DamageType should not be allowed to damage a Cuffed D-Class or Cuffed Scientist? Check https://github.com/Marco15453/CuffedTK#damage-types for all DamageTypes
   disallowed_damage_types:
-  - Friendly fire detector
-  - FALLDOWN
-  - GRENADE
+  - Explosion
+  - FriendlyFireDetector
+  - Falldown
 ```
