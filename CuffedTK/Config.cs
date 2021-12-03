@@ -36,12 +36,12 @@ namespace CuffedTK
         [Description("What hint should be displayed when trying to damage a Cuffed D-Class with a Disallowed DamageType? %PLAYER% will be replaced with the Target Username and %DAMAGETYPE% will be replaced with the DamageType")]
         public string DamageTypesMessage { get; set; } = "You cannot damage %PLAYER% with %DAMAGETYPE%!";
 
-        [Description("What DamageType should not be allowed to damage a Cuffed D-Class or Cuffed Scientist? Check https://github.com/Marco15453/CuffedTK#damage-types for all DamageTypes")]
-        public HashSet<string> DisallowedDamageTypes { get; set; } = new HashSet<string>
+        [Description("What DamageType should not be allowed to damage a Cuffed D-Class or Cuffed Scientist? Check https://exiled-team.github.io/EXILED/api/Exiled.API.Enums.DamageType.html for all DamageTypes")]
+        public HashSet<DamageType> DisallowedDamageTypes { get; set; } = new HashSet<DamageType>
         {
-            DamageTypes.FriendlyFireDetector.Name,
-            DamageTypes.Falldown.Name,
-            DamageTypes.Grenade.Name
+            DamageType.Explosion,
+            DamageType.FriendlyFireDetector,
+            DamageType.Falldown
         };
     }
 }
