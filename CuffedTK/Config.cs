@@ -1,11 +1,11 @@
-﻿using Exiled.API.Interfaces;
-using Exiled.API.Enums;
-using System.ComponentModel;
+﻿using Exiled.API.Enums;
+using Exiled.API.Interfaces;
 using System.Collections.Generic;
+using System.ComponentModel;
 
-namespace CuffedTK 
+namespace CuffedTK
 {
-    public sealed class Config : IConfig 
+    public sealed class Config : IConfig
     {
         [Description("Should the plugin be enabled?")]
         public bool IsEnabled { get; set; } = true;

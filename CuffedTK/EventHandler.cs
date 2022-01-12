@@ -1,6 +1,5 @@
-﻿using Exiled.Events.EventArgs;
-using Exiled.API.Enums;
-using System.Linq;
+﻿using Exiled.API.Enums;
+using Exiled.Events.EventArgs;
 
 namespace CuffedTK
 {

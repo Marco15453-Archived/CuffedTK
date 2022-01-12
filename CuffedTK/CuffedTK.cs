@@ -1,32 +1,31 @@
-﻿using System;
-using Exiled.API.Enums;
-using Exiled.API.Features;
+﻿using Exiled.API.Features;
+using System;
 
-namespace CuffedTK 
+namespace CuffedTK
 {
-    public class CuffedTK : Plugin<Config> 
+    public class CuffedTK : Plugin<Config>
     {
         public override string Name => "CuffedTK";
         public override string Author => "Marco15453";
         public override string Prefix => "CTK";
-        public override Version Version => new Version(1, 9, 0);
-        public override Version RequiredExiledVersion => new Version(4, 1, 2);
+        public override Version Version => new Version(1, 9, 1);
+        public override Version RequiredExiledVersion => new Version(4, 2, 2);
 
         private EventHandler eventHandler;
 
-        public override void OnEnabled() 
+        public override void OnEnabled()
         {
             registerEvents();
             base.OnEnabled();
         }
 
-        public override void OnDisabled() 
+        public override void OnDisabled()
         {
             unregisterEvents();
             base.OnDisabled();
         }
 
-        private void registerEvents() 
+        private void registerEvents()
         {
             eventHandler = new EventHandler(this);
 
@@ -34,7 +33,7 @@ namespace CuffedTK
             Exiled.Events.Handlers.Player.Hurting += eventHandler.onHurting;
         }
 
-        private void unregisterEvents() 
+        private void unregisterEvents()
         {
             // Player
             Exiled.Events.Handlers.Player.Hurting -= eventHandler.onHurting;
