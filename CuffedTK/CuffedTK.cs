@@ -8,8 +8,8 @@ namespace CuffedTK
         public override string Name => "CuffedTK";
         public override string Author => "Marco15453";
         public override string Prefix => "CTK";
-        public override Version Version => new Version(1, 9, 1);
-        public override Version RequiredExiledVersion => new Version(4, 2, 2);
+        public override Version Version => new Version(1, 11, 0);
+        public override Version RequiredExiledVersion => new Version(5, 1, 3);
 
         private EventHandler eventHandler;
 
