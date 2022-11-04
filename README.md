@@ -1,3 +1,5 @@
+# THIS PLUGIN HAS BEEN ARCHIVED
+
 # CuffedTK
 A simple plugin that prevents Cuffed Players be damaged by configureable Teams and/or Damaged Type
 
